@@ -166,5 +166,15 @@ class tcpchatclient {
             System.out.println("Error: " + E.getMessage());
         }
     }
-}# Cnlab3066
-Computer networks lab exercise 
+}
+
+ex 5
+import sys
+from scapy.all import sniff
+
+def packet_handler(packet):
+    # Display packet details
+    packet.show()
+
+if __name__ == "__main__":
+    sniff(iface="eth0", prn=packet_handler)
